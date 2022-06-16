@@ -11,12 +11,27 @@ This addon itself has an implicit dependency on [advanced-expression-gd](https:/
 which will be automatically pulled before pulling other dependencies.
 
 ## Using Packages Quickstart
-1. Clone the repository or [grab the latest release](https://github.com/you-win/godot-package-manager/releases)
-2. Place the `addons/godot-package-manager` folder into your project's `addons` directory
-3. Enable the plugin in Godot. A new menu will appear in the editor's bottom panel
-4. Find some [Godot packages on NPM](https://www.npmjs.com/search?q=keywords:godot)
-5. Add them to the `godot.package` file [(See the `godot.package` section)](#godotpackage)
-6. Press the `Update` button in the plugin's UI to start pulling packages
+
+### Prerequests
+1. godot in PATH
+2. installed wget
+   
+### Installation
+1. **MAKE A COPY OF YOUR PROJECT. Below code is unstable and can OVERWRITE your godot project settings**
+2. Close Godot
+3. cd to dir with `project.godot`
+4. Download gpm_init.sh and execute 
+        <!-- TBD Change to you-win repo once merged -->
+        <!-- wget https://raw.githubusercontent.com/you-win/godot-package-manager/master/gpm_init.sh -O - | bash -->
+
+        wget https://raw.githubusercontent.com/LunCoSim/godot-package-manager/master/gpm_init.sh -O - | bash
+
+5. Add `addons/` to `.gitignore`
+6. Open Godot
+7. Enable the plugin in Godot. A new menu will appear in the editor's bottom panel
+8. Find some [Godot packages on NPM](https://www.npmjs.com/search?q=keywords:godot)
+9.  Add them to the `godot.package` file [(See the `godot.package` section)](#godotpackage)
+10. Press the `Update` button in the plugin's UI to start pulling packages
 
 ## Publishing Packages Quickstart
 1. Download the [npm cli tool](https://github.com/npm/cli)
